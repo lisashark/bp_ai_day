@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>企業處ai檢核日</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="site-header">
+      <div class="header-deco"></div>
+      <h1 class="site-title">企業處AI檢核日</h1>
+      <p class="site-subtitle">請填寫以下資料完成報名。每場次最多8個人。</p>
+    </header>
+
+    <main class="form-container">
+      <form id="registrationForm" novalidate>
+
+        <!-- 姓名 -->
+        <div class="form-group" id="group-name">
+          <label class="form-label" for="name">
+            <span class="label-icon">👤</span> 姓名
+            <span class="required-mark">*</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-input"
+            placeholder="請輸入您的姓名"
+            autocomplete="off"
+          />
+          <span class="error-msg" id="error-name">請填寫姓名</span>
+        </div>
+
+        <!-- 部門 -->
+        <div class="form-group" id="group-department">
+          <label class="form-label" for="department">
+            <span class="label-icon">🏢</span> 選擇部門
+            <span class="required-mark">*</span>
+          </label>
+          <div class="select-wrapper">
+            <select id="department" name="department" class="form-select">
+              <option value="">請選擇部門</option>
+              <option value="電子商務部">電子商務部</option>
+              <option value="流通事業部">流通事業部</option>
+              <option value="永續發展部">永續發展部</option>
+              <option value="保險科技部">保險科技部</option>
+              <option value="數據加值部">數據加值部</option>
+              <option value="事業推展部">事業推展部</option>
+            </select>
+          </div>
+          <span class="error-msg" id="error-department">請選擇部門</span>
+        </div>
+
+        <!-- 員編號碼 -->
+        <div class="form-group" id="group-empId">
+          <label class="form-label" for="empId">
+            <span class="label-icon">🪪</span> 員編號碼
+            <span class="required-mark">*</span>
+          </label>
+          <input
+            type="text"
+            id="empId"
+            name="empId"
+            class="form-input"
+            placeholder="請輸入員編號碼"
+            autocomplete="off"
+          />
+          <span class="error-msg" id="error-empId">請填寫員編號碼</span>
+        </div>
+
+        <!-- 想要的時段 -->
+        <div class="form-group" id="group-timeSlot">
+          <label class="form-label">
+            <span class="label-icon">🕐</span> 想要的時段
+            <span class="required-mark">*</span>
+          </label>
+          <div id="timeSlotsContainer" class="radio-grid">
+            <div class="slots-loading">載入時段中…</div>
+          </div>
+          <span class="error-msg" id="error-timeSlot">請選擇時段</span>
+        </div>
+
+        <!-- 想選擇的角色 -->
+        <div class="form-group" id="group-role">
+          <label class="form-label">
+            <span class="label-icon">🎭</span> 想選擇的角色
+            <span class="required-mark">*</span>
+          </label>
+          <div class="radio-grid" id="roleContainer">
+            <label class="radio-btn">
+              <input type="radio" name="role" value="PM" />
+              <span class="radio-label">PM</span>
+            </label>
+            <label class="radio-btn">
+              <input type="radio" name="role" value="SA" />
+              <span class="radio-label">SA</span>
+            </label>
+            <label class="radio-btn">
+              <input type="radio" name="role" value="PG" />
+              <span class="radio-label">PG</span>
+            </label>
+            <label class="radio-btn">
+              <input type="radio" name="role" value="業務" />
+              <span class="radio-label">業務</span>
+            </label>
+            <label class="radio-btn">
+              <input type="radio" name="role" value="客服" />
+              <span class="radio-label">客服</span>
+            </label>
+            <label class="radio-btn">
+              <input type="radio" name="role" value="行政" />
+              <span class="radio-label">行政</span>
+            </label>
+          </div>
+          <span class="error-msg" id="error-role">請選擇角色</span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="btn-text">送出報名 🚀</span>
+          <span class="btn-loading" hidden>送出中…</span>
+        </button>
+
+      </form>
+    </main>
+
+    <!-- 成功畫面 -->
+    <div class="success-screen" id="successScreen" hidden>
+      <div class="success-card">
+        <div class="success-icon">🎊</div>
+        <h2>報名成功！</h2>
+        <p>感謝您的報名，祝您比賽順利！</p>
+        <div class="success-info" id="successInfo"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 錯誤彈窗 -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal-card">
+      <button class="modal-x-btn" id="modalXBtn" aria-label="關閉">✕</button>
+      <div class="modal-icon">⚠️</div>
+      <h3 class="modal-title" id="modalTitle">送出失敗</h3>
+      <p class="modal-msg" id="modalMsg"></p>
+      <button class="modal-close-btn" id="modalCloseBtn">了解，重新填寫</button>
+      <p class="modal-notice" id="modalNotice" hidden></p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
