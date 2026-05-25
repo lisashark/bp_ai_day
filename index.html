@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>企業處ai檢核日</title>
+  <title>企業處 AI知識交流測驗</title>
   <link rel="stylesheet" href="css/main.css" />
 </head>
+
 <body>
   <div class="page-wrapper">
     <header class="site-header">
+      <h1 class="site-title">企業處 AI知識交流測驗</h1>
       <div class="header-deco"></div>
-      <h1 class="site-title">企業處AI檢核日</h1>
       <p class="site-subtitle">請填寫以下資料完成報名。每場次最多8個人。</p>
     </header>
 
@@ -20,17 +22,10 @@
         <!-- 姓名 -->
         <div class="form-group" id="group-name">
           <label class="form-label" for="name">
-            <span class="label-icon">👤</span> 姓名
+            <span class="label-icon">👤</span> 姓名(中文全名)
             <span class="required-mark">*</span>
           </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="form-input"
-            placeholder="請輸入您的姓名"
-            autocomplete="off"
-          />
+          <input type="text" id="name" name="name" class="form-input" placeholder="請輸入您的姓名" autocomplete="off" />
           <span class="error-msg" id="error-name">請填寫姓名</span>
         </div>
 
@@ -57,24 +52,17 @@
         <!-- 員編號碼 -->
         <div class="form-group" id="group-empId">
           <label class="form-label" for="empId">
-            <span class="label-icon">🪪</span> 員編號碼
+            <span class="label-icon">🗃️</span> 員編號碼
             <span class="required-mark">*</span>
           </label>
-          <input
-            type="text"
-            id="empId"
-            name="empId"
-            class="form-input"
-            placeholder="請輸入員編號碼"
-            autocomplete="off"
-          />
+          <input type="text" id="empId" name="empId" class="form-input" placeholder="請輸入員編號碼" autocomplete="off" />
           <span class="error-msg" id="error-empId">請填寫員編號碼</span>
         </div>
 
         <!-- 想要的時段 -->
         <div class="form-group" id="group-timeSlot">
           <label class="form-label">
-            <span class="label-icon">🕐</span> 想要的時段
+            <span class="label-icon">🕐</span> 選擇時段(活動2小時)
             <span class="required-mark">*</span>
           </label>
           <div id="timeSlotsContainer" class="radio-grid">
@@ -86,7 +74,7 @@
         <!-- 想選擇的角色 -->
         <div class="form-group" id="group-role">
           <label class="form-label">
-            <span class="label-icon">🎭</span> 想選擇的角色
+            <span class="label-icon">🎭</span> 選擇角色
             <span class="required-mark">*</span>
           </label>
           <div class="radio-grid" id="roleContainer">
@@ -131,7 +119,7 @@
       <div class="success-card">
         <div class="success-icon">🎊</div>
         <h2>報名成功！</h2>
-        <p>感謝您的報名，祝您比賽順利！</p>
+        <p>感謝您的報名，祝您活動順利！</p>
         <div class="success-info" id="successInfo"></div>
       </div>
     </div>
@@ -151,4 +139,5 @@
 
   <script src="js/app.js"></script>
 </body>
+
 </html>

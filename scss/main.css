@@ -130,9 +130,6 @@ body::after {
   outline: none;
   transition: border-color 0.2s ease;
 }
-.form-input::-moz-placeholder {
-  color: rgb(146.8808510638, 152.7936170213, 164.6191489362);
-}
 .form-input::placeholder {
   color: rgb(146.8808510638, 152.7936170213, 164.6191489362);
 }
@@ -163,9 +160,7 @@ body::after {
   font-size: 0.95rem;
   color: #2D2D4E;
   background: #FFFFFF;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   outline: none;
   cursor: pointer;
   transition: border-color 0.2s ease;
@@ -434,4 +429,4 @@ body::after {
   to {
     opacity: 1;
   }
-}/*# sourceMappingURL=main.css.map */
+}

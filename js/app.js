@@ -65,7 +65,7 @@ function renderTimeSlots(slots) {
       <input type="radio" name="timeSlot" value="${slot.time}" ${isFull ? 'disabled' : ''} />
       <span class="radio-label">
         ${slot.time}
-        <span class="slot-count">${isFull ? '❌ 已額滿' : `✅ ${slot.count}/${slot.max} 人`}</span>
+        <span class="slot-count">${isFull ? '❌ 已額滿' : `✅ <span class="slot-count-current">${slot.count}</span> / ${slot.max} 人`}</span>
       </span>
     `;
 
