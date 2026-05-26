@@ -223,6 +223,17 @@ body {
   }
 }
 
+// ===== Slot Note =====
+.slot-note {
+  font-size: 0.9rem;
+  color: $text-mid;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: rgba($primary, 0.06);
+  border-left: 3px solid $primary;
+  border-radius: $radius-sm;
+}
+
 // ===== Error Message =====
 .error-msg {
   display: none;
